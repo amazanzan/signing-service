@@ -18,8 +18,8 @@ export async function build() {
 
   // Add middleware to write http access logs
   app.use(accessLogger())
-  app.use(express.json())
-  app.use(express.urlencoded({ extended: false }))
+  app.use(express.json({ limit: '10mb' }));
+  app.use(express.urlencoded({ limit: '10mb', extended: false }));
   app.use(cors())
 
   app.get('/healthz', async function (req, res) {
