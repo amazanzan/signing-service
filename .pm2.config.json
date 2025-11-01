@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "name": "signing-service",
+      "script": "npm",
+      "args": "start",
+      "time": true
+    }
+  ]
+}
